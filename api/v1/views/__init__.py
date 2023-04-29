@@ -1,10 +1,7 @@
 from flask import Blueprint
+from api.v1.views.index import *
+
+# Create a Blueprint instance with the url prefix "/api/v1"
 app_views = Blueprint('app_views', __name__, url_prefix='/api/v1')
-from api.v1.views.index import *  # noqa
-from api.v1.views.states import *  # noqa
-from api.v1.views.cities import *  # noqa
-from api.v1.views.amenities import *  # noqa
-from api.v1.views.users import *  # noqa
-from api.v1.views.places import *  # noqa
-from api.v1.views.places_reviews import *  # noqa
-from api.v1.views.places_amenities import *  # noqa
+
+# Import all the views from api.v1.views.index using a wildcard import
